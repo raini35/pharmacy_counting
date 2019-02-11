@@ -8,9 +8,9 @@ The program takes two arguments the path to the input file and the path to the o
     python ./src/main.py ./path/to/input_file ./path/to/output_file
 
 ## General:
-Inside /src, my program is divided up into three files (`main.py`, `process_file.py`, and `write_output.py`) w/ the following functions:
+Inside `./src`, my program is divided up into three files (`main.py`, `process_file.py`, and `write_output.py`) w/ the following functions:
 * `main.py`
-
+  * Where the magic happens
 * `process_file.py`
   * clean_up(line, pattern)
     * input: string, regex pattern
