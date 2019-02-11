@@ -8,10 +8,10 @@ The program takes two arguments the path to the input file and the path to the o
 
 ## General
 Inside /src, my program is divided up into three files w/ the following functions:
-* main.py
+* `main.py`
 
-* process_file.py
-  * clean_up(line, pattern) -
+* `process_file.py`
+  * clean_up(line, pattern)
     * input: string, regex pattern
     * output: string
     * Uses the regex pattern to extract the parts of the current line w/ commas and double double apostrophes
@@ -33,7 +33,7 @@ Inside /src, my program is divided up into three files w/ the following function
     * output: list
     * Opens the file input,
 
-* write_output.py
+* `write_output.py`
   * write_output(file, header, info, sortInfo=False)
     * input: file-object, list, dict, True or False
     * output: None
@@ -41,17 +41,17 @@ Inside /src, my program is divided up into three files w/ the following function
 
 ## Tests:
 In total, I made 4 tests:
-* blank_line_test - This test was to make sure that my program was able to recognize if the current line was just blank
+* `blank_line_test` - This test was to make sure that my program was able to recognize if the current line was just blank
 
-* prescriber_uniqueness - This test was used so that I was only incrementing the drug prescriber count if the current prescriber hadn't already been logged.
+* `prescriber_uniqueness` - This test was used so that I was only incrementing the drug prescriber count if the current prescriber hadn't already been logged.
 
 Because in process_line I split the line strings into array by comma, it was necessary for my program to filter out any unnecessary commas. The following two tests made sure that my program was able to handle unnecessary commas:
 
-* single_comma_test - This test covered for an input where there was a single comma inside one of the line strings. For example,
+* `single_comma_test` - This test covered for an input where there was a single comma inside one of the line strings. For example,
 
     '1000000003,Johnson,James,"CHLORPROMAZINE 5,000",1000'
 
-* multiple_commas_test - This test covered for an input where there were multiple commans inside one of the line strings. For example,
+* `multiple_commas_test` - This test covered for an input where there were multiple commans inside one of the line strings. For example,
 
     '1000000001,"Smith, MD, INC.",James,AMBIEN,100'
 
