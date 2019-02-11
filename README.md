@@ -10,7 +10,7 @@ The program takes two arguments the path to the input file and the path to the o
 ## General:
 Inside `./src`, my program is divided up into three files (`main.py`, `process_file.py`, and `write_output.py`) w/ the following functions:
 * `main.py`
-  * Where the magic happens
+  * Where the magic starts
 * `process_file.py`
   * clean_up(line, pattern)
     * input: string, regex pattern
