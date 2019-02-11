@@ -54,12 +54,12 @@ def writeOutput(file, header, info, sortInfo):
             drug = item[0]
             patientCount = item[1][0]
             totalPrice = item[1][1]
-            file.write("%s,%d,%.2f\n" %(drug, patientCount, totalPrice))
+            file.write("%s,%d,%.0f\n" %(drug, patientCount, totalPrice))
     else:
         for drug in info.keys():
             patientCount = info[drug][0]
             totalPrice = info[drug][1]
-            file.write("%s,%d,%.2f\n" %(drug, patientCount, totalPrice))
+            file.write("%s,%d,%.0f\n" %(drug, patientCount, totalPrice))
 
     return
 
