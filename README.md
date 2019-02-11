@@ -50,17 +50,17 @@ Because in process_line I split the line strings into array by comma, it was nec
 
 * `single_comma_test` - This test covered for an input where there was a single comma inside one of the line strings. For example,
 
-    1000000003,Johnson,James,"CHLORPROMAZINE 5,000",1000
+        1000000003,Johnson,James,"CHLORPROMAZINE 5,000",1000
 
 * `multiple_commas_test` - This test covered for an input where there were multiple commans inside one of the line strings. For example,
 
-    1000000001,"Smith, MD, INC.",James,AMBIEN,100
+        1000000001,"Smith, MD, INC.",James,AMBIEN,100
 
 ## Notes/Improvements:
 * The program in much larger data sets would be too slow. It would be better if I used software that enabled distributed storage and processing. My first thought was to utilize multi-processing, split up the files according to the number of CPUs in the computer and designate each file to a CPU to process, and then combine the results, but the cost of splitting up the files was too much. There's probably a better way of doing it, but when I implemented it, to equally split the file, I went through the entire file first to count the total amount of lines first to approximate when the limits. When I compared the two programs together, there was not much improvement.
 * The regex that I programmed in only handled single cases of a 'single comma' or 'multiple commas.' If there were more than one case, it would only pick up on one of the cases instead of all. For example, with the following:
 
-    1000000001,"Smith, MD, INC.",James,"CHLORPROMAZINE 5,000",100
+        1000000001,"Smith, MD, INC.",James,"CHLORPROMAZINE 5,000",100
 
     It would only recognize "Smith, MD" instead of both "Smith, MD " and "CHLORPROMAZINE 5,000".
 * The program isn't that dynamic. I hardcoded the information to process. It would be better if the user could choose the keys and the values that are being stored in the dict.
