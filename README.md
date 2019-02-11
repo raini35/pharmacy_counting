@@ -13,31 +13,31 @@ Inside `./src`, my program is divided up into three files (`main.py`, `process_f
   * Where the magic starts
 * `process_file.py`
   * clean_up(line, pattern)
-    * input: string, regex pattern
-    * output: string
+    * **input**: string, regex pattern
+    * **output**: string
     * Uses the regex pattern to extract the parts of the current line w/ commas and double double apostrophes
 
   * prescriber_existence(name, drug, fileInfo)
-    * input: string, string, dict
-    * output: True or False
+    * **input**: string, string, dict
+    * **output**: True or False
     * Checks if name of the current prescriber already exists in the drug's prescriber list.
 
   * process_line(line, fileInfo)
-    * input: line, dict
-    * output: None
+    * **input**: line, dict
+    * **output**: None
     * Stores the line input into fileInfo dict by first turning the line into a list split by the commas present in the string and then uses the following schema to store the line into fileInfo:
-      * key: drug
-      * value: [count, total_price, {prescriber_name: True}]
+      * **key**: drug
+      * **value**: [count, total_price, {prescriber_name: True}]
 
   * process_file(file):
-    * input: string
-    * output: list
-    * Opens the file input,
+    * **input**: string
+    * **output**: list
+    * Opens the file input and goes through each line to process it and store it into an object. The output list will have two elements. The first element of the output list will be the header and the second element of the output list will be the rest of the lines. 
 
 * `write_output.py`
   * write_output(file, header, info, sortInfo=False)
-    * input: file-object, list, dict, True or False
-    * output: None
+    * **input**: file-object, list, dict, True or False
+    * **output**: None
     * Writes header (the first line of the input file) and info (the processed data) into file (the output file). sortInfo is set to False as default, but if sortInfo is set to True, then info will be written sorted by total price in descending order.
 
 ## Tests:
