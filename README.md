@@ -1,4 +1,5 @@
 # pharmacy_counting
+### by Rainier Go
 
 The following program runs in Python 2.7.15.
 
