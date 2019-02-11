@@ -61,5 +61,5 @@ Because in process_line I split the line strings into array by comma, it was nec
 
     '1000000001,"Smith, MD, INC.",James,"CHLORPROMAZINE 5,000",100'
 
-It would only recognize "Smith, MD" instead of both "Smith, MD " and "CHLORPROMAZINE 5,000".
+    It would only recognize "Smith, MD" instead of both "Smith, MD " and "CHLORPROMAZINE 5,000".
 * The program isn't that dynamic. I hardcoded the information to process. It would be better if the user could choose the keys and the values that are being stored in the dict.
