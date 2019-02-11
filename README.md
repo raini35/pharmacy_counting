@@ -7,7 +7,7 @@ The program takes two arguments the path to the input file and the path to the o
 
     python ./src/main.py ./path/to/input_file ./path/to/output_file
 
-## General
+## General:
 Inside /src, my program is divided up into three files w/ the following functions:
 * `main.py`
 
@@ -56,7 +56,7 @@ Because in process_line I split the line strings into array by comma, it was nec
 
     '1000000001,"Smith, MD, INC.",James,AMBIEN,100'
 
-## Notes/Improvements
+## Notes/Improvements:
 * The program in much larger data sets would be too slow. It would be better if I used software that enabled distributed storage and processing. My first thought was to utilize multi-processing, split up the files according to the number of CPUs in the computer and designate each file to a CPU to process, and then combine the results, but the cost of splitting up the files was too much. There's probably a better way of doing it, but when I implemented it, to equally split the file, I went through the entire file first to count the total amount of lines first to approximate when the limits. When I compared the two programs together, there was not much improvement.
 * The regex that I programmed in only handled single cases of a 'single comma' or 'multiple commas.' If there were more than one case, it would only pick up on one of the cases instead of all. For example, with the following:
 
